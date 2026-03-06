@@ -68,8 +68,8 @@ Route::middleware(['auth'])->group(function () {
 |--------------------------------------------------------------------------
 */
 
-Route::get('/{slug}', [FrontPageController::class, 'show']);
-
+Route::get('/{slug}', [FrontPageController::class, 'show'])
+    ->where('slug', '^(?!admin|login|register|dashboard).*$');
 
 /*
 |--------------------------------------------------------------------------
