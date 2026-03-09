@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.AWS_SSH_KEY }}
 
           script: |
-            cd /var/www/basicmvpapp
+            cd /home/ubuntu/basicmvpapp
             git pull origin main
             composer install --no-dev --optimize-autoloader
             npm install
